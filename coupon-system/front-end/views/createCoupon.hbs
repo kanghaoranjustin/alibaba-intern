@@ -1,0 +1,74 @@
+<script type="text/javascript">
+        function CheckTypes(val){
+         var man=document.getElementById('man');
+         var jian=document.getElementById('jian');
+         var zkj=document.getElementById('zkj');
+         var lj=document.getElementById('lj');
+         var m=document.getElementById('m');
+         var j=document.getElementById('j');
+         var z=document.getElementById('z');
+         var l=document.getElementById('l');
+         if(val=='mj'){
+           man.style.display='block';
+           m.style.display='block';
+           j.style.display='block';
+           z.style.display='none';
+           l.style.display='none';
+           jian.style.display='block';
+           zkj.style.display='none';
+           lj.style.display='none';}
+         else if(val=='zkj'){
+            m.style.display='none';
+           j.style.display='none';
+           z.style.display='block';
+           l.style.display='none';
+            zkj.style.display='block';
+            man.style.display='none';
+           jian.style.display='none';
+           lj.style.display='none';
+           }
+         else if(val=='lj'){
+            m.style.display='none';
+           j.style.display='none';
+           z.style.display='none';
+           l.style.display='block';
+            lj.style.display='block';
+            man.style.display='none';
+           jian.style.display='none';
+           zkj.style.display='none';}
+         else{
+           man.style.display='none';
+           jian.style.display='none';
+           zkj.style.display='none';
+           lj.style.display='none';}
+        }
+    </script>
+
+
+<h1>创建优惠卷</h1>
+<form action="/createCoupon" method="post">
+    <p>优惠卷名称: <input type="text" name = "coupon_name"/></p>
+    <p>发放优惠卷数量: <input value=0 type="number" name = "num"/></p>
+    <p>优惠卷说明: <input type="text" name = "instruction"/></p>
+
+    <select name="type" onchange='CheckTypes(this.value);'>
+        <option>优惠卷类型</option>
+        <option value="mj">满减</option>
+        <option value="zkj">折扣卷</option>
+        <option value="lj">立减</option>
+    </select>
+    <br>
+    <label id="m" style="display:none;">满:</label>
+    <input type="number" name="man" value=0 id="man" style='display:none;'/>
+    <label id="j" style="display:none;">减:</label>
+    <input type="number" value=0 name="jian" id="jian" style='display:none;'/>
+    <label id="z" style="display:none;">折扣:</label>
+    <input type="number" value=0 name="zkj" id="zkj" style='display:none;'/>
+    <label id="l" style="display:none;">立减:</label>
+    <input type="number" value=0 name="lj" id="lj" style='display:none;'/>
+    <p>开始日期: <input type="date" name = "start_date"/></p>
+    <p>结束日期: <input type="date" name = "end_date"/></p>
+    <p><input type="submit" value="确认" /> <input type="reset" value="重填" /></p>
+</form>
+
+<a href="/login">回到主页</a>

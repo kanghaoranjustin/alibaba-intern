@@ -1,0 +1,7 @@
+<form action="/displayCoupon/{{username}}" method="POST">
+{{#each couponArray}}
+<h2> {{this}}</h2>
+<button type="submit" name="coupon" value={{ this }}>领取</button>
+{{/each}}
+</form>
+

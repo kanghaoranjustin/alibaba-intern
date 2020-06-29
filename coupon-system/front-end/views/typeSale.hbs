@@ -1,0 +1,11 @@
+<h2>商品类别:</h2>
+
+
+<form action="/userGood/{{username}}" method="POST">
+{{# each typeArray}}
+    <br>
+    <button type="submit" name="get_type" value={{this}}>{{this}}</button>
+    <br>
+    <br>
+{{/each}}
+</form>

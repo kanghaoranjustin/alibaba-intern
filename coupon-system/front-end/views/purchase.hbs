@@ -1,0 +1,6 @@
+<h1>商品{{good}}已下单</h1>
+
+<p>需要支付{{price}}元</p>
+<form action="/pay/{{username}}/{{price}}" method="POST">
+    <button type="submit" name="pay" value={{ good }}>支付</button>
+</form>

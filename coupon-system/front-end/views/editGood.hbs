@@ -1,0 +1,16 @@
+<h1>{{ goodName }}</h1>
+<h2>库存：{{ number }}</h2>
+<h2>分类：{{ type }}</h2>
+<h2>单价：{{ price }}</h2>
+<h2>状态：{{ status }}</h2>
+
+
+<form action="/editGood/{{goodName}}"  method="POST">
+<input type="number" name="inventory">
+<button type="submit" name="change" value="inventory">更改库存</button>
+<br>
+<button type="submit" name="change" value="offline">下架</button>
+<br>
+</form>
+
+<a href="/">回到主页</a>

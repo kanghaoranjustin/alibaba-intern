@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<h2>商品类别:</h2>
+
+
+<form action="/submit" method="POST">
+{{# each typeArray}}
+    <br>
+    <button type="submit" name="get_type" value={{this}}>{{this}}</button>
+    <br>
+    <br>
+{{/each}}
+</form>
+
+<h2>下线商品:</h2>
+<form action="/offline" method="POST">
+{{# each nameArray}}
+    {{ this }}
+    <br>
+    <button type="submit" name="turnOn" value={{ this }}>上线</button>
+    <br>
+    <br>
+{{/each}}
+</form>
+
+<form action="/createG" method="POST">
+    <button type="submit">添加商品</button>
+</form>
+
+
+
+

@@ -1,0 +1,8 @@
+<form action="/cart/{{username}}" method="POST">
+
+{{#each goodArray}}
+<h2> {{this}}</h2>
+<button type="submit" name="buy" value={{ this }}>购买</button>
+{{/each}}
+
+</form>

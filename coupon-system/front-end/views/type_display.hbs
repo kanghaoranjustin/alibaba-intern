@@ -1,0 +1,16 @@
+<h1>{{ type_name }}</h1>
+
+<form action='/editGood' method="POST">
+{{# each nameArray}}
+    {{ this }}
+    <br>
+    <button type="submit" name="edit" value={{ this }}>编辑商品</button>
+    <br>
+    <br>
+{{/each}}
+</form>
+
+
+
+
+

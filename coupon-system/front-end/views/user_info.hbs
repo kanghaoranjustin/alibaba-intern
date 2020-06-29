@@ -1,0 +1,16 @@
+<h1>用户信息</h1> 
+<p> {{username}} </p> 
+<h3>查看优惠卷</h3>
+<form action="/userAct/{{username}}" method="post"> 
+<button type="submit" name="act" value="good">商品</button>
+<br>
+<button type="submit" name="act" value="coupon">优惠卷</button>
+<br>
+<button type="submit" name="act" value="wallet">卡包</button>
+<br>
+<button type="submit" name="act" value="cart">购物车</button>
+<br>
+<input type="number" name="topup">
+<button type="submit" name="act" value="topup">充值</button>
+</form>
+      
